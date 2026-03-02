@@ -1,0 +1,30 @@
+create table Friend(
+  userid int not null comment"用户id",
+  friendid int not null comment"好友id",
+  primary key (userid,friendid)
+);
+
+create table User(
+  id int primary key auto_increment comment"用户id",
+  name varchar(50) not null unique comment"用户名",
+  passwd varchar(50) not null  comment"用户密码",
+  state ENUM('online','offline') default 'offline' comment"当前登录状态"
+);
+
+create table AllGroup(
+  id int primary key auto_increment comment"组id",
+  groupname varchar(50) not null comment"组名称",
+  groupdesc varchar(200) default '' comment"组功能描述"
+);
+
+create table GroupUser(
+  groupid int  comment"组id",
+  userid int   comment"组员id",
+  grouprole enum('creator','normal') default 'normal' comment"组内角色",
+  primary key(groupid,userid)
+);
+
+create table OfflineMessage(
+    toid int comment"接收id",
+    message varchar(500) not null  comment"离线消息（存储json字符串）"
+);

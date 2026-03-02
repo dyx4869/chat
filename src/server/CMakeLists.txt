@@ -1,0 +1,6 @@
+aux_source_directory(. src_list)
+aux_source_directory(./db db_list)
+aux_source_directory(./model model_list)
+aux_source_directory(./redis redis_list)
+add_executable(ChatServer ${src_list} ${db_list} ${model_list} ${redis_list})
+target_link_libraries(ChatServer muduo_net muduo_base pthread hiredis mysqlclient)
