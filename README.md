@@ -8,12 +8,7 @@ cd nginx-1.29.5
 make && make install
 ```
 
-<font style="color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);">安装路径：</font>`<font style="color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);">/usr/local/nginx</font>`
 
-## <font style="color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);">二、Nginx TCP 负载均衡配置</font>
-<font style="color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);">在 </font>`<font style="color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);">/usr/local/nginx/conf/nginx.conf</font>`<font style="color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);"> 中添加：</font>
-
-<font style="color:rgb(0, 0, 0);background-color:rgba(0, 0, 0, 0);">nginx</font>
 
 ```plain
 stream {
